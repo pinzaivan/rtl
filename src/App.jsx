@@ -8,6 +8,10 @@ function App() {
     area_m2: "",
     codigo: "",
     dirCatastro: "",
+    colin_Norte: "",
+    colin_Este: "",
+    colin_Sur: "",
+    colin_Oeste: "",
   });
 
   const handleInputChange = (e) => {
@@ -61,6 +65,68 @@ function App() {
           onChange={handleInputChange}
           placeholder="Direccion de catastro"
         />
+        <table>
+          <thead>
+            <tr>
+              <th>COLINDANTES</th>
+              <th>NOMBRE COMPLETO</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>NORTE</td>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="colin_Norte"
+                  value={formValues.colin_Norte}
+                  onChange={handleInputChange}
+                  placeholder="Colindantes Norte"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>ESTE</td>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="colin_Este"
+                  value={formValues.colin_Este}
+                  onChange={handleInputChange}
+                  placeholder="Colindante Este"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>SUR</td>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="colin_Sur"
+                  value={formValues.colin_Sur}
+                  onChange={handleInputChange}
+                  placeholder="Colindantes Sur"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>OESTE</td>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="colin_Oeste"
+                  value={formValues.colin_Oeste}
+                  onChange={handleInputChange}
+                  placeholder="Colindantes Oeste"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </section>
       <p>
         El inmueble denominado {formValues.direction} con un área de{" "}
@@ -73,10 +139,14 @@ function App() {
         <br></br> <b>COLINDANTES</b>
         <br></br>
         <br></br>
-        NORTE: JUAN CARLOS MARTINEZ NONSOQUE<br></br>
-        ESTE: LUIS ANTONIO NONSOQUE RUÍZ<br></br>
-        SUR: JOSE HELADIO MARTINEZ NONZOQUE<br></br>
-        OESTE: VÍA DE ACCESO - BLANCA LILIA MORCOTE DE CASTELBLANCO<br></br>
+        NORTE: {formValues.colin_Norte}
+        <br></br>
+        ESTE: {formValues.colin_Este}
+        <br></br>
+        SUR: {formValues.colin_Sur}
+        <br></br>
+        OESTE: {formValues.colin_Oeste}
+        <br></br>
         <br></br>
         PUNTO DE PARTIDA: Del punto de partida número 01 con coordenadas planas
         X=1091464,34m y Y=1105537,84m, ubicado en la parte noroeste del predio,
