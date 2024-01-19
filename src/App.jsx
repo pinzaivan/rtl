@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
+import ExcelTable from "./components/ExcelTable";
 
 function App() {
   const [formValues, setFormValues] = useState({
@@ -27,7 +28,13 @@ function App() {
     <>
       <h1>REDACCION TECNICA DE LINDEROS SSJ</h1>
       <section>
+        <div className="App">
+          <ExcelTable />
+          <br />
+          <h2>DATOS DEL PREDIO</h2>
+        </div>
         <input
+          className="large"
           type="text"
           name="direction"
           value={formValues.direction}
@@ -36,6 +43,7 @@ function App() {
         />
         <div class="areasquare">
           <input
+            className="large"
             type="text"
             name="area_Ha"
             value={formValues.area_Ha}
@@ -44,6 +52,7 @@ function App() {
           />
 
           <input
+            className="large"
             type="text"
             name="area_m2"
             value={formValues.area_m2}
@@ -52,6 +61,7 @@ function App() {
           />
         </div>
         <input
+          className="large"
           type="text"
           name="codigo"
           value={formValues.codigo}
@@ -59,6 +69,7 @@ function App() {
           placeholder="Numero predial"
         />
         <input
+          className="large"
           type="text"
           name="dirCatastro"
           value={formValues.dirCatastro}
@@ -78,6 +89,7 @@ function App() {
               <td>
                 {" "}
                 <input
+                  className="large"
                   type="text"
                   name="colin_Norte"
                   value={formValues.colin_Norte}
@@ -91,6 +103,7 @@ function App() {
               <td>
                 {" "}
                 <input
+                  className="large"
                   type="text"
                   name="colin_Este"
                   value={formValues.colin_Este}
@@ -104,6 +117,7 @@ function App() {
               <td>
                 {" "}
                 <input
+                  className="large"
                   type="text"
                   name="colin_Sur"
                   value={formValues.colin_Sur}
@@ -117,6 +131,7 @@ function App() {
               <td>
                 {" "}
                 <input
+                  className="large"
                   type="text"
                   name="colin_Oeste"
                   value={formValues.colin_Oeste}
@@ -148,13 +163,14 @@ function App() {
         OESTE: {formValues.colin_Oeste}
         <br></br>
         <br></br>
-        PUNTO DE PARTIDA: Del punto de partida número 01 con coordenadas planas
-        X=1091464,34m y Y=1105537,84m, ubicado en la parte noroeste del predio,
-        donde concurren las colindancias de VÍA DE ACCESO AL MEDIO, EN FRENTE;
-        BLANCA LILIA MORCOTE DE CASTELBLANCO, predio identificado con número
-        predial nacional 151870000000000020131000000000, JUAN CARLOS MARTINEZ
-        NONSOQUE, predio identificado con número predial nacional
-        151870000000000020131000000000 y el predio en mención.<br></br>
+        Valor de la celda en la tabla 1: xx PUNTO DE PARTIDA: Del punto de
+        partida número 01 con coordenadas planas X=1091464,34m y Y=1105537,84m,
+        ubicado en la parte noroeste del predio, donde concurren las
+        colindancias de VÍA DE ACCESO AL MEDIO, EN FRENTE; BLANCA LILIA MORCOTE
+        DE CASTELBLANCO, predio identificado con número predial nacional
+        151870000000000020131000000000, JUAN CARLOS MARTINEZ NONSOQUE, predio
+        identificado con número predial nacional 151870000000000020131000000000
+        y el predio en mención.<br></br>
         <br></br> COLINDA ASÍ:<br></br>
         <br></br>
         NORTE: Del punto de partida número 01 en dirección sureste en línea
