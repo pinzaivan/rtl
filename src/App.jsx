@@ -28,11 +28,6 @@ function App() {
     <>
       <h1>REDACCION TECNICA DE LINDEROS SSJ</h1>
       <section>
-        <div className="App">
-          <ExcelTable />
-          <br />
-          <h2>DATOS DEL PREDIO</h2>
-        </div>
         <input
           className="large"
           type="text"
@@ -143,10 +138,14 @@ function App() {
           </tbody>
         </table>
       </section>
+      <div className="App">
+        <ExcelTable formValues={formValues} />
+        <br />
+      </div>
       <p>
-        El inmueble denominado {formValues.direction} con un área de{" "}
-        {formValues.area_Ha} ha + {formValues.area_m2} m² según levantamiento
-        planimétrico, con referencia catastral {formValues.codigo}
+        El inmueble denominado con un área de {formValues.area_Ha} ha +{" "}
+        {formValues.area_m2} m² según levantamiento planimétrico, con referencia
+        catastral {formValues.codigo}
         dirección catastral {formValues.dirCatastro}, presenta los siguientes
         linderos, referidos al sistema de referencia oficial Magna Sirgas con
         origen central:
@@ -163,14 +162,13 @@ function App() {
         OESTE: {formValues.colin_Oeste}
         <br></br>
         <br></br>
-        Valor de la celda en la tabla 1: xx PUNTO DE PARTIDA: Del punto de
-        partida número 01 con coordenadas planas X=1091464,34m y Y=1105537,84m,
-        ubicado en la parte noroeste del predio, donde concurren las
-        colindancias de VÍA DE ACCESO AL MEDIO, EN FRENTE; BLANCA LILIA MORCOTE
-        DE CASTELBLANCO, predio identificado con número predial nacional
-        151870000000000020131000000000, JUAN CARLOS MARTINEZ NONSOQUE, predio
-        identificado con número predial nacional 151870000000000020131000000000
-        y el predio en mención.<br></br>
+        PUNTO DE PARTIDA: Del punto de partida número 01 con coordenadas planas
+        X=1091464,34m y Y=1105537,84m, ubicado en la parte noroeste del predio,
+        donde concurren las colindancias de VÍA DE ACCESO AL MEDIO, EN FRENTE;
+        BLANCA LILIA MORCOTE DE CASTELBLANCO, predio identificado con número
+        predial nacional 151870000000000020131000000000, JUAN CARLOS MARTINEZ
+        NONSOQUE, predio identificado con número predial nacional
+        151870000000000020131000000000 y el predio en mención.<br></br>
         <br></br> COLINDA ASÍ:<br></br>
         <br></br>
         NORTE: Del punto de partida número 01 en dirección sureste en línea

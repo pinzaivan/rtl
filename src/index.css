@@ -30,10 +30,10 @@ h1 {
 section{
 display: flex;
 flex-direction: column;
-width: 2200px;
+width: 1500px;
 gap: 10px;
 padding: 1rem;
-border: 1px solid white;  
+
 }
 input{
   height: 15px;
@@ -49,6 +49,9 @@ div.areasquare{
 }
 div.Exceldiv{
   font-size: x-small;
+}
+table.firstTable{
+  width: 1500px;
 }
 
 
